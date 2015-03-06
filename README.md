@@ -1,2 +1,3 @@
-# expb
-Exponential backoff
+# exponential-backoff
+
+Implementing exponential backoff
