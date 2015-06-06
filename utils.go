@@ -12,6 +12,11 @@ func tryGet(uri string) Producer {
 
 func httpStatus(v interface{}) (ok, retryable bool) {
 	res := v.(*http.Response)
+
+	if res == nil {
+		return false, false
+	}
+
 	statusCode := res.StatusCode
 	if statusCode >= 200 && statusCode <= 299 {
 		ok = true
